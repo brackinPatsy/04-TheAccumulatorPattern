@@ -5,12 +5,12 @@ This module demonstrates the ACCUMULATOR pattern in three classic forms:
    IN GRAPHICS:   x = x + pixels
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Patsy.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# done: 2.
 #   RUN this program, then READ its code.
 #     Then answer the following, GETTING HELP AS NEED!  (Ask questions!!!)
 #     Write your answers in any reasonable way (your choice).
@@ -29,12 +29,20 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #            for k in range(r - 1):
 #            for k in range(r):
 #            for k in range(r + 1):
-#
+r = 5
+i = 1
+for k in range(r):
+    print ('k =',k, 'time in loop =',i)
+    i = i+1
+
 #     b. If you want a loop that runs from 0 to s, inclusive,
 #          what expression would you use in the _____ below?
 #
 #            for k in range(_____):
-#
+i = 1
+for k in range(r+1):
+    print ('k =',k, 'time in loop =',i)
+    i = i+1
 #     c. If you want a loop that runs from r to s, inclusive, assuming s >= r,
 #          what expression would you use in the _____ below?
 #
@@ -45,17 +53,18 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #          what expression would you use in the _____ below?
 #
 #            for k in range(_____):
-#
+s = 20
+for k in range(r+4,s-10):
+     print('k=', k)
+
 #     e. The following code snippet attempts to return the number
 #          of integers from r to s, inclusive, whose cosines are positive.
 #          It has at least 5 distinct errors (one per line).  What are they?
 #
-#              for k in range(r - s):
-#                  count = 0
-#                  if math.cos(r) > 0:
-#                      count = 1
-#                  return count
-#
+#              for k in range(r - s): #for k in range (r, s+1):
+#                  count = 0#should be before the for
+#                  if math.cos(r) > 0: #is this the correct symbol?
+#                  count = count+1
 #     f. The code in the "graphics accumulation" example below includes:
 #            for _ in range(n):
 #        What does the   _   (underscore) mean?
